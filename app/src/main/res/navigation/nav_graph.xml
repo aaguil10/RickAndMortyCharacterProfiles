@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/CharactersFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.rickandmortycharacterprofiles.FirstFragment"
+        android:id="@+id/CharactersFragment"
+        android:name="com.example.rickandmortycharacterprofiles.characters.CharactersFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_characters">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
@@ -22,7 +22,7 @@
         tools:layout="@layout/fragment_second">
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_SecondFragment_to_CharactersFragment"
+            app:destination="@id/CharactersFragment" />
     </fragment>
 </navigation>
