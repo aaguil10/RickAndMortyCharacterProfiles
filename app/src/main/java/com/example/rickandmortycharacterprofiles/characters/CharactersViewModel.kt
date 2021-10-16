@@ -1,10 +1,16 @@
 package com.example.rickandmortycharacterprofiles.characters
 
-import androidx.hilt.lifecycle.ViewModelInject
-import androidx.lifecycle.ViewModel
-import com.example.rickandmortycharacterprofiles.data.CharacterRepo
 
-class CharactersViewModel @ViewModelInject constructor(
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import com.example.rickandmortycharacterprofiles.data.CharacterEntity
+import com.example.rickandmortycharacterprofiles.data.CharacterRepo
+import com.example.rickandmortycharacterprofiles.utils.Resource
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
+
+@HiltViewModel
+class CharactersViewModel @Inject constructor(
     private val repo: CharacterRepo
 ) : ViewModel() {
 
